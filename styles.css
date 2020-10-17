@@ -34,7 +34,7 @@ body {
 
 button {
   background: var(--blue-500);
-  color: white;
+  color: gray;
   margin: .3rem;
   border: none;
   border-radius: .2rem;
