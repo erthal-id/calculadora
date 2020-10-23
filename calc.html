@@ -5,18 +5,21 @@
 		<!-- Essa parte é referente ao Javascript-->
 		<script>
 			{
-				function igual()
+				function igual(numero)
 				{
 					cal.display.value=eval(cal.display.value);
 					if(cal.display.value!="Infinity")
 						{
 							cal.display.value=eval(cal.display.value);
+							numero++;
 						}
 					else
 						{	
-						cal.display.value="Erro";
-						alert("Não é possível dividir valores por 0!");
+							cal.display.value="Erro";
+							alert("Não é possível dividir valores por 0!");
+							numero++;
 						}
+					return numero;
 				}
 			}
 		</script>
@@ -38,6 +41,10 @@
 				padding:15px;
 				text-align: center;
 				border-radius: 3px;
+				border-top:2px  groove  #000;
+				border-right:2px  groove  #000;
+				border-bottom:6px  groove  #000;
+				border-left:6px  groove  #000;
 			}
 			input[type=text]
 			{
@@ -111,7 +118,7 @@
 				<input type="button" value="÷" onclick="cal.display.value+='/'">
 				<input type="button" value="." onclick="cal.display.value+='.'">
 				<br>
-				<input type="button" value="=" onclick="igual()" id="equal">
+				<input type="button" value="=" onclick="igual(1)" id="equal">
 
 
 		</form>
