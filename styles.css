@@ -89,3 +89,9 @@ button.deep-purple {
   background-color: var(--deep-purple-500);
   color: white;
 }
+
+button.green-gradient {
+  background-color: #07cb77;
+  background-image: linear-gradient(to bottom, #07cb77, #0c8b6d 130%);
+  color: white;
+}
