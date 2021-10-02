@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
 		<title>Calculadora!</title>
+
+		<!-- Essa parte é referente ao Javascript-->
+
 		<script>
 			{
-				function igual()
+				function igual(numero)
 				{
 					cal.display.value=eval(cal.display.value);
 					if(cal.display.value!="Infinity")
 						{
 							cal.display.value=eval(cal.display.value);
+							numero++;
 						}
 					else
 						{	
 						cal.display.value="Erro";
 						alert("Indivisão por 0!!");
+
+
+
 						}
+					return numero;
 				}
 			}
 		</script>
+		<!-- Essa parte é referente ao CSS-->
 		<style>
 			body 
 			{
-				background:#696969;
+				background:#a7a6a6;
 			}
 			*{
 				box-sizing: border-box;
@@ -36,6 +46,10 @@
 				padding:15px;
 				text-align: center;
 				border-radius: 3px;
+				border-top:2px  groove  #000;
+				border-right:2px  groove  #000;
+				border-bottom:6px  groove  #000;
+				border-left:6px  groove  #000;
 			}
 			input[type=text]
 			{
@@ -54,11 +68,15 @@
 				font-size: 20px;
 				font-weight: bold;
 				border-radius: 10px;
+				border-top:1px  groove  #000;
+				border-right:1px  groove  #000;
+				border-bottom:2px  groove  #000;
+				border-left:2px  groove  #000;
 			}
 			input[type=button]:hover 
 			{
-				color: #000000;
-				background-color: #FFFACD;
+				color: #212020;
+				background-color: #cf6bee;
 			}
 			h1
 			{
@@ -72,9 +90,18 @@
 			{
 				width: 79%;
 			}
+            .banner{
+            background-color:purple;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 30px;
+            }
 		</style>
 	</head>
 	<body>
+        <div class="banner" >
+            <h1>Super calculadora da Bemol!!!!!!<h1>
+        </div>
 		<div class="wrap">
 			<form name="cal">
 				<h1> CALCULADORA </h1>
@@ -100,7 +127,7 @@
 				<input type="button" value="÷" onclick="cal.display.value+='/'">
 				<input type="button" value="." onclick="cal.display.value+='.'">
 				<br>
-				<input type="button" value="=" onclick="igual()" id="equal">
+				<input type="button" value="=" onclick="igual(1)" id="equal">
 
 
 		</form>
